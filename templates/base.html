@@ -1,3 +1,10 @@
+{% load static %}
+
+{% block extrahead %}
+    <script>window.CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/';</script>
+    {{ block.super }}
+{% endblock  %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +37,7 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-lg-right"
                                 aria-labelledby="navbarDarkDropdownMenuLink">
-{#                                <a class="dropdown-item" href="{% url 'article_new' %}">Yangi post</a>#}
+                                <a class="dropdown-item" href="{% url 'article_new' %}">Yangi post</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{% url 'password_change'%}">Kalit so'zni almashtirish</a>
                                 <div class="dropdown-divider"></div>
